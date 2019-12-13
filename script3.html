@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Script3</title>
+</head>
+<body>
+<script>
+    var r, x, i = 1, k=false, j=4;
+    r = Math.floor(Math.random() * 10);
+    // alert(r);
+    x = prompt('Введіть число');
+    while (k == false)
+    {
+        if (x == r)
+        {
+            alert('Вітаємо, ви вгадали. Загадане число');
+            alert(r);
+            alert("Кількість спроб");
+            alert(i);
+            k=true;
+        }
+        else
+        {
+            if (i==3)
+            {
+                alert("Спроби закінчились, ви програли. Загадане число");
+                alert(r);
+                k = true;
+            }
+            if (i < 3)
+            {
+                i++;
+                if (x>r)
+                {
+                    alert("Ви не вгадали, задане число менше, у вас залишилось cпроб");
+                    alert(j-i);
+                    x = prompt("Введіть повторно число");
+                }
+                else{
+                    alert("Ви не вгадали, задане число більше, у вас залишилось cпроб");
+                    alert(j-i);
+                    x = prompt("Введіть повторно число");
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
